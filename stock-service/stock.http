@@ -36,3 +36,7 @@ Content-Type: application/json
   "productId": 5,
   "availableQuantity": 120
 }
+
+
+### Create Stock - All
+GET http://localhost:8083/api/v1/stocks
