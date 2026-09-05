@@ -1,0 +1,38 @@
+### Create Stock - Product 2
+POST http://localhost:8083/api/v1/stocks
+Content-Type: application/json
+
+{
+  "productId": 2,
+  "availableQuantity": 250
+}
+
+
+### Create Stock - Product 3
+POST http://localhost:8083/api/v1/stocks
+Content-Type: application/json
+
+{
+  "productId": 3,
+  "availableQuantity": 75
+}
+
+
+### Create Stock - Product 4
+POST http://localhost:8083/api/v1/stocks
+Content-Type: application/json
+
+{
+  "productId": 4,
+  "availableQuantity": 500
+}
+
+
+### Create Stock - Product 5
+POST http://localhost:8083/api/v1/stocks
+Content-Type: application/json
+
+{
+  "productId": 5,
+  "availableQuantity": 120
+}
