@@ -1,0 +1,140 @@
+### ==========================================
+### Product Service - API Requests
+### Base URL: http://localhost:8082
+### ==========================================
+
+
+### 1. Health Check
+GET http://localhost:8082/actuator/health
+
+
+### ==========================================
+### CREATE PRODUCTS
+### ==========================================
+
+### 2. Create Product - Headphones
+POST http://localhost:8082/api/v1/products
+Content-Type: application/json
+
+{
+  "sku": "SKU-200",
+  "name": "Noise Cancelling Headphones",
+  "description": "Over-ear wireless headphones",
+  "price": 199.99,
+  "category": "ELECTRONICS",
+  "brand": "Sony"
+}
+
+
+### 3. Create Product - Smartphone
+POST http://localhost:8082/api/v1/products
+Content-Type: application/json
+
+{
+  "sku": "SKU-201",
+  "name": "Galaxy S25",
+  "description": "Premium Android smartphone with AMOLED display",
+  "price": 899.99,
+  "category": "ELECTRONICS",
+  "brand": "Samsung"
+}
+
+
+### 4. Create Product - Laptop
+POST http://localhost:8082/api/v1/products
+Content-Type: application/json
+
+{
+  "sku": "SKU-202",
+  "name": "ThinkPad X1 Carbon",
+  "description": "Business laptop with Intel Core processor",
+  "price": 1499.99,
+  "category": "COMPUTERS",
+  "brand": "Lenovo"
+}
+
+
+### 5. Create Product - Running Shoes
+POST http://localhost:8082/api/v1/products
+Content-Type: application/json
+
+{
+  "sku": "SKU-203",
+  "name": "Air Zoom Running Shoes",
+  "description": "Lightweight running shoes for everyday training",
+  "price": 129.99,
+  "category": "FOOTWEAR",
+  "brand": "Nike"
+}
+
+
+### 6. Create Product - Coffee Maker
+POST http://localhost:8082/api/v1/products
+Content-Type: application/json
+
+{
+  "sku": "SKU-204",
+  "name": "Automatic Coffee Maker",
+  "description": "Programmable coffee maker with thermal carafe",
+  "price": 89.99,
+  "category": "HOME_APPLIANCES",
+  "brand": "Philips"
+}
+
+
+### ==========================================
+### GET PRODUCT
+### ==========================================
+
+### 7. Get Product By ID
+### Replace 1 with the actual product ID
+GET http://localhost:8082/api/v1/products/1
+
+
+### ==========================================
+### LIST PRODUCTS
+### ==========================================
+
+### 8. List Products - Filters + Pagination
+GET http://localhost:8082/api/v1/products?page=0&size=10&category=ELECTRONICS&status=ACTIVE&sort=price,asc
+
+
+### ==========================================
+### UPDATE PRODUCT
+### ==========================================
+
+### 9. Update Product
+### Replace 1 with the actual product ID
+PUT http://localhost:8082/api/v1/products/1
+Content-Type: application/json
+
+{
+  "name": "Noise Cancelling Headphones Pro",
+  "description": "Improved ANC with enhanced battery life",
+  "price": 249.99,
+  "category": "ELECTRONICS",
+  "brand": "Sony"
+}
+
+
+### ==========================================
+### CHANGE PRODUCT STATUS
+### ==========================================
+
+### 10. Change Product Status
+### Replace 1 with the actual product ID
+PATCH http://localhost:8082/api/v1/products/1/status
+Content-Type: application/json
+
+{
+  "status": "DISCONTINUED"
+}
+
+
+### ==========================================
+### DELETE PRODUCT
+### ==========================================
+
+### 11. Soft Delete Product
+### Replace 1 with the actual product ID
+DELETE http://localhost:8082/api/v1/products/1
