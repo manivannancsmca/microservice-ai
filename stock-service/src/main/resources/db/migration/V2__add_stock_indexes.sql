@@ -1,0 +1,1 @@
+CREATE INDEX idx_stocks_product_id ON stocks (product_id);
