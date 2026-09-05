@@ -1,4 +1,4 @@
-package com.microservice.stock.service;
+package com.microservice.stock.service.impl;
 
 
 import com.microservice.stock.dto.request.*;
