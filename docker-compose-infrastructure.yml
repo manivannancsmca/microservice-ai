@@ -119,6 +119,26 @@ services:
     networks:
       - ecommerce-net
 
+  mysql-delivery:
+    image: mysql:8.0
+    container_name: mysql-delivery
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: delivery_db
+    ports:
+      - "3313:3306"
+    volumes:
+      - mysql_delivery_data:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - ecommerce-net
+
 volumes:
   mysql_user_data:
   mysql_product_data:
@@ -126,6 +146,7 @@ volumes:
   mysql_order_data:
   mysql_payment_data:
   mysql_notification_data:
+  mysql_delivery_data:
 
 networks:
   ecommerce-net:
