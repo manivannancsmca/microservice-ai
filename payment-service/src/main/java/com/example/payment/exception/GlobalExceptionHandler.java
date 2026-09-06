@@ -11,7 +11,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.microservice.payment.dto.response.ApiResponse;
+import com.example.payment.dto.response.ApiResponse;
 
 import java.util.stream.Collectors;
 
