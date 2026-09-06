@@ -14,7 +14,7 @@ Content-Type: application/json
 
 
 ### Get Notification
-GET http://localhost:8086/api/v1/notifications/{notificationId}
+GET http://localhost:8086/api/v1/notifications/d162916-629f-4761-bd7e-541f27f5a04e
 
 
 ### Update Notification Status
