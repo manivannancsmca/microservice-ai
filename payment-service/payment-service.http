@@ -1,5 +1,5 @@
 ### Create Payment
-POST http://localhost:8086/api/v1/payments
+POST http://localhost:8085/api/v1/payments
 Content-Type: application/json
 
 {
@@ -13,12 +13,12 @@ Content-Type: application/json
 ###
 
 ### Get Payment by ID
-GET http://localhost:8086/api/v1/payments/1
+GET http://localhost:8085/api/v1/payments/d50ff4dc-5d30-4788-b849-28b8b13bb635
 
 ###
 
 ### Update Payment Status
-PUT http://localhost:8086/api/v1/payments/1/status
+PUT http://localhost:8085/api/v1/payments/1/status
 Content-Type: application/json
 
 {
@@ -28,4 +28,4 @@ Content-Type: application/json
 ###
 
 ### Search Payments
-GET http://localhost:8086/api/v1/payments?orderId=ord-12345&page=0&size=10
+GET http://localhost:8085/api/v1/payments?orderId=ord-12345&page=0&size=10

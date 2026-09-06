@@ -14,6 +14,7 @@ import com.example.payment.dto.response.ApiResponse;
 
 import java.util.stream.Collectors;
 
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -74,8 +75,8 @@ public class GlobalExceptionHandler {
                                 .body(ApiResponse.error("An unexpected error occurred", request.getRequestURI()));
         }
 
-        @ExceptionHandler({ InvalidRequestException.class, BusinessException.class })
-        public ResponseEntity<ApiResponse<Void>> handleBusiness(RuntimeException ex) {
-                return ResponseEntity.badRequest().body(ApiResponse.error(ex.getMessage()));
-        }
+        // @ExceptionHandler({ InvalidRequestException.class, BusinessException.class })
+        // public ResponseEntity<ApiResponse<Void>> handleBusiness(RuntimeException ex,HttpServletRequest request) {
+        //         return ResponseEntity.badRequest().body(ApiResponse.error(ex.getMessage()), request.getRequestURI());
+        // }
 }
