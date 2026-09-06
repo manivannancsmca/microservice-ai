@@ -1,0 +1,30 @@
+### Create Notification
+POST http://localhost:8086/api/v1/notifications
+Content-Type: application/json
+
+{
+  "userId": "user-123",
+  "orderId": "ord-456",
+  "type": "ORDER_CREATED",
+  "channel": "EMAIL",
+  "recipient": "customer@example.com",
+  "subject": "Your order has been placed",
+  "content": "Thank you! Your order #ord-456 has been received."
+}
+
+
+### Get Notification
+GET http://localhost:8086/api/v1/notifications/{notificationId}
+
+
+### Update Notification Status
+PUT http://localhost:8086/api/v1/notifications/{notificationId}/status
+Content-Type: application/json
+
+{
+  "status": "SENT"
+}
+
+
+### Retry Notification (only if FAILED)
+POST http://localhost:8086/api/v1/notifications/{notificationId}/retry

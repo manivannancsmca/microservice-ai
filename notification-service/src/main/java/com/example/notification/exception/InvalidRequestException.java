@@ -1,5 +1,5 @@
 package com.example.notification.exception;
 
-public class InvalidRequestException {
-
+public class InvalidRequestException extends RuntimeException {
+    public InvalidRequestException(String message) { super(message); }
 }

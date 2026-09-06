@@ -28,7 +28,7 @@ public class NotificationService {
     private final NotificationMapper notificationMapper;
 
     public NotificationService(NotificationRepository notificationRepository,
-                               NotificationMapper notificationMapper) {
+            NotificationMapper notificationMapper) {
         this.notificationRepository = notificationRepository;
         this.notificationMapper = notificationMapper;
     }
@@ -51,8 +51,8 @@ public class NotificationService {
 
     @Transactional(readOnly = true)
     public Page<NotificationResponse> search(String userId,
-                                             NotificationStatus status,
-                                             Pageable pageable) {
+            NotificationStatus status,
+            Pageable pageable) {
         Page<Notification> page;
         if (userId != null && status != null) {
             page = notificationRepository.findByUserIdAndStatus(userId, status, pageable);
@@ -67,7 +67,7 @@ public class NotificationService {
     }
 
     public NotificationResponse updateStatus(String notificationId,
-                                             UpdateNotificationStatusRequest request) {
+            UpdateNotificationStatusRequest request) {
         Notification notification = findEntity(notificationId);
         validateStatusTransition(notification.getStatus(), request.status());
 

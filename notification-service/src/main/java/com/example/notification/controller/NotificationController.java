@@ -29,13 +29,13 @@ public class NotificationController {
             @Valid @RequestBody CreateNotificationRequest request) {
         NotificationResponse response = notificationService.create(request);
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(ApiResponse.ok("Notification created", response));
+                .body(ApiResponse.success("Notification created", response));
     }
 
     @GetMapping("/{notificationId}")
     public ResponseEntity<ApiResponse<NotificationResponse>> getById(
             @PathVariable String notificationId) {
-        return ResponseEntity.ok(ApiResponse.ok(notificationService.getByNotificationId(notificationId)));
+        return ResponseEntity.ok(ApiResponse.success(notificationService.getByNotificationId(notificationId)));
     }
 
     @GetMapping
@@ -43,14 +43,14 @@ public class NotificationController {
             @RequestParam(required = false) String userId,
             @RequestParam(required = false) NotificationStatus status,
             @PageableDefault(size = 20) Pageable pageable) {
-        return ResponseEntity.ok(ApiResponse.ok(notificationService.search(userId, status, pageable)));
+        return ResponseEntity.ok(ApiResponse.success(notificationService.search(userId, status, pageable)));
     }
 
     @PutMapping("/{notificationId}/status")
     public ResponseEntity<ApiResponse<NotificationResponse>> updateStatus(
             @PathVariable String notificationId,
             @Valid @RequestBody UpdateNotificationStatusRequest request) {
-        return ResponseEntity.ok(ApiResponse.ok(
+        return ResponseEntity.ok(ApiResponse.success(
                 "Status updated",
                 notificationService.updateStatus(notificationId, request)));
     }
@@ -58,7 +58,7 @@ public class NotificationController {
     @PostMapping("/{notificationId}/retry")
     public ResponseEntity<ApiResponse<NotificationResponse>> retry(
             @PathVariable String notificationId) {
-        return ResponseEntity.ok(ApiResponse.ok(
+        return ResponseEntity.ok(ApiResponse.success(
                 "Notification queued for retry",
                 notificationService.retry(notificationId)));
     }
