@@ -1,0 +1,160 @@
+### Health
+GET http://localhost:8084/actuator/health
+
+
+### Create order
+POST http://localhost:8084/api/v1/orders
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "items": [
+    {
+      "productId": 1,
+      "productName": "Wireless Mouse",
+      "productSku": "SKU-001",
+      "unitPrice": 29.99,
+      "quantity": 2
+    },
+    {
+      "productId": 2,
+      "productName": "Mechanical Keyboard",
+      "productSku": "SKU-002",
+      "unitPrice": 89.99,
+      "quantity": 1
+    }
+  ]
+}
+
+
+### Get order by ID
+GET http://localhost:8084/api/v1/orders/1
+
+
+### Get order by order number
+GET http://localhost:8084/api/v1/orders/number/ORD-20260906123045-A1B2
+
+
+### List orders for a user
+GET http://localhost:8084/api/v1/orders?userId=1&status=PENDING&page=0&size=10
+
+
+### Update order status
+PATCH http://localhost:8084/api/v1/orders/1/status
+Content-Type: application/json
+
+{
+  "status": "CONFIRMED"
+}
+
+
+### ============================================================
+### Additional POST APIs
+### ============================================================
+
+
+### POST 1 - Create simple order
+POST http://localhost:8084/api/v1/orders
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "items": [
+    {
+      "productId": 3,
+      "productName": "USB-C Cable",
+      "productSku": "SKU-003",
+      "unitPrice": 14.99,
+      "quantity": 2
+    }
+  ]
+}
+
+
+### POST 2 - Create order with multiple products
+POST http://localhost:8084/api/v1/orders
+Content-Type: application/json
+
+{
+  "userId": 3,
+  "items": [
+    {
+      "productId": 4,
+      "productName": "Laptop Stand",
+      "productSku": "SKU-004",
+      "unitPrice": 49.99,
+      "quantity": 1
+    },
+    {
+      "productId": 5,
+      "productName": "Webcam",
+      "productSku": "SKU-005",
+      "unitPrice": 79.99,
+      "quantity": 1
+    },
+    {
+      "productId": 6,
+      "productName": "Desk Mat",
+      "productSku": "SKU-006",
+      "unitPrice": 19.99,
+      "quantity": 2
+    }
+  ]
+}
+
+
+### POST 3 - Create order for another user
+POST http://localhost:8084/api/v1/orders
+Content-Type: application/json
+
+{
+  "userId": 10,
+  "items": [
+    {
+      "productId": 7,
+      "productName": "Bluetooth Headphones",
+      "productSku": "SKU-007",
+      "unitPrice": 129.99,
+      "quantity": 1
+    },
+    {
+      "productId": 8,
+      "productName": "Wireless Charger",
+      "productSku": "SKU-008",
+      "unitPrice": 34.99,
+      "quantity": 1
+    }
+  ]
+}
+
+
+### POST 4 - Create bulk order
+POST http://localhost:8084/api/v1/orders
+Content-Type: application/json
+
+{
+  "userId": 20,
+  "items": [
+    {
+      "productId": 1,
+      "productName": "Wireless Mouse",
+      "productSku": "SKU-001",
+      "unitPrice": 29.99,
+      "quantity": 5
+    },
+    {
+      "productId": 2,
+      "productName": "Mechanical Keyboard",
+      "productSku": "SKU-002",
+      "unitPrice": 89.99,
+      "quantity": 5
+    },
+    {
+      "productId": 9,
+      "productName": "Monitor",
+      "productSku": "SKU-009",
+      "unitPrice": 249.99,
+      "quantity": 3
+    }
+  ]
+}
