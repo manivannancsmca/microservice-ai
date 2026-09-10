@@ -1,0 +1,11 @@
+eureka:
+  instance:
+    hostname: ${EUREKA_HOSTNAME}          # set via env
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}  # for peer awareness later
+  server:
+    enable-self-preservation: true
+    renewal-percent-threshold: 0.85
+    eviction-interval-timer-in-ms: 10000
