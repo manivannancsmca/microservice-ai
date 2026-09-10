@@ -1,0 +1,26 @@
+### Create Delivery
+POST http://localhost:8087/api/v1/deliveries
+Content-Type: application/json
+
+{
+  "orderId": "ord-12345",
+  "userId": "user-67890",
+  "shippingAddress": "123 Main St, City, Country",
+  "carrier": "FedEx"
+}
+
+###
+
+### Get Delivery by Delivery ID
+GET http://localhost:8087/api/v1/deliveries/1
+
+###
+
+### Update Delivery Status
+PUT http://localhost:8087/api/v1/deliveries/1/status
+Content-Type: application/json
+
+{
+  "status": "ASSIGNED",
+  "trackingNumber": "FX123456789"
+}
