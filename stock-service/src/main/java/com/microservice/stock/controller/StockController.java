@@ -90,4 +90,5 @@ public class StockController {
         StockResponse response = stockService.release(productId, request);
         return ResponseEntity.ok(ApiResponse.success("Stock released successfully", response, httpRequest.getRequestURI()));
     }
+    
 }
