@@ -20,4 +20,5 @@ public interface StockService {
     StockResponse reserve(Long productId, ReserveStockRequest request);
 
     StockResponse release(Long productId, ReleaseStockRequest request);
+    
 }
