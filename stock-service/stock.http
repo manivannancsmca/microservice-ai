@@ -1,4 +1,5 @@
 ### Create Stock - Product 2
+
 POST http://localhost:8083/api/v1/stocks
 Content-Type: application/json
 
@@ -9,6 +10,7 @@ Content-Type: application/json
 
 
 ### Create Stock - Product 3
+
 POST http://localhost:8083/api/v1/stocks
 Content-Type: application/json
 
@@ -19,6 +21,7 @@ Content-Type: application/json
 
 
 ### Create Stock - Product 4
+
 POST http://localhost:8083/api/v1/stocks
 Content-Type: application/json
 
