@@ -9,4 +9,5 @@ public record StockResponse(
         Integer reservedQuantity,
         Instant createdAt,
         Instant updatedAt
+        
 ) {}
