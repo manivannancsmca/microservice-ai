@@ -12,4 +12,5 @@ public record UpdateStockRequest(
         @NotNull(message = "Reserved quantity is required")
         @Min(value = 0, message = "Reserved quantity cannot be negative")
         Integer reservedQuantity
+        
 ) {}
