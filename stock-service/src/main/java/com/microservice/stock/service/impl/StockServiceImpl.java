@@ -126,4 +126,5 @@ public class StockServiceImpl implements StockService {
         return stockRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Stock not found with id: " + id));
     }
+    
 }
