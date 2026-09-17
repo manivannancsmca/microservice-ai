@@ -28,4 +28,5 @@ public interface StockMapper {
     @Mapping(target = "updatedAt", ignore = true)
     @Mapping(target = "version", ignore = true)
     void updateEntity(UpdateStockRequest request, @MappingTarget Stock stock);
+        
 }
