@@ -11,4 +11,5 @@ public record CreateStockRequest(
         @NotNull(message = "Available quantity is required")
         @Min(value = 0, message = "Available quantity cannot be negative")
         Integer availableQuantity
+        
 ) {}
