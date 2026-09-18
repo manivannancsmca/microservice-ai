@@ -14,4 +14,5 @@ public record ProductResponse(
         String status,
         Instant createdAt,
         Instant updatedAt
+        
 ) {}
