@@ -1,6 +1,5 @@
 package com.microservice.product.service.impl;
 
-
 import com.microservice.product.dto.request.CreateProductRequest;
 import com.microservice.product.dto.request.StatusUpdateRequest;
 import com.microservice.product.dto.request.UpdateProductRequest;
@@ -92,4 +91,5 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Product not found with id: " + id));
     }
+    
 }
