@@ -1,6 +1,5 @@
 package com.microservice.product.service;
 
-
 import com.microservice.product.dto.request.CreateProductRequest;
 import com.microservice.product.dto.request.StatusUpdateRequest;
 import com.microservice.product.dto.request.UpdateProductRequest;
@@ -21,4 +20,5 @@ public interface ProductService {
     ProductResponse updateStatus(Long id, StatusUpdateRequest request);
 
     void delete(Long id);
+    
 }
