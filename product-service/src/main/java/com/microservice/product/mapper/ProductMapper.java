@@ -29,4 +29,5 @@ public interface ProductMapper {
     @Mapping(target = "updatedAt", ignore = true)
     @Mapping(target = "version", ignore = true)
     void updateEntity(UpdateProductRequest request, @MappingTarget Product product);
+        
 }
