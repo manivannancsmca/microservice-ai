@@ -22,4 +22,5 @@ public record ApiResponse<T>(
     public static <T> ApiResponse<T> error(String message, String path) {
         return new ApiResponse<>(false, message, null, Instant.now(), path);
     }
+        
 }
