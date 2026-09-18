@@ -22,4 +22,5 @@ public record UpdateProductRequest(
 
         @Size(max = 100)
         String brand
+        
 ) {}
