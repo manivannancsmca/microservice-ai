@@ -19,7 +19,6 @@ Independent microservice responsible for product catalog management.
 docker compose -f ../docker-compose-infrastructure.yml up -d
 mvn spring-boot:run
 
-
 ---
 
 ### Current status
@@ -30,7 +29,6 @@ mvn spring-boot:run
 | product-service  | 8082 | 3307 / product_db | Completed      |
 
 ---
-
 **Next phase**
 
 When you have verified that product-service works (create → get → update → status → delete), reply with:
@@ -38,4 +36,3 @@ When you have verified that product-service works (create → get → update →
 **“product-service verified – start stock-service”**
 
 Then we will continue with the next independent service (`stock-service`) following the exact same disciplined approach.
-
