@@ -9,4 +9,5 @@ public record StatusUpdateRequest(
         @Pattern(regexp = "ACTIVE|INACTIVE|DISCONTINUED",
                  message = "Status must be ACTIVE, INACTIVE or DISCONTINUED")
         String status
+        
 ) {}
