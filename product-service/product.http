@@ -3,10 +3,8 @@
 ### Base URL: http://localhost:8082
 ### ==========================================
 
-
 ### 1. Health Check
 GET http://localhost:8082/actuator/health
-
 
 ### ==========================================
 ### CREATE PRODUCTS
