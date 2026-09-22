@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.time.Instant;
 
 public record PaymentResponse(
+        
         String paymentId,
         String orderId,
         String userId,
@@ -16,4 +17,5 @@ public record PaymentResponse(
         String failureReason,
         Instant createdAt,
         Instant updatedAt
+        
 ) {}
