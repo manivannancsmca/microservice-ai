@@ -1,7 +1,6 @@
 ### Health
 GET http://localhost:8084/actuator/health
 
-
 ### Create order
 POST http://localhost:8084/api/v1/orders
 Content-Type: application/json
