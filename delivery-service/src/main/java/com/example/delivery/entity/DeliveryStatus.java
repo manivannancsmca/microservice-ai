@@ -8,4 +8,5 @@ public enum DeliveryStatus {
     DELIVERED,
     FAILED,
     CANCELLED
+    
 }
