@@ -96,8 +96,10 @@ public class DeliveryService {
             case OUT_FOR_DELIVERY -> next == DeliveryStatus.DELIVERED || next == DeliveryStatus.FAILED;
             case DELIVERED, FAILED, CANCELLED -> false;
         };
+        
         if (!allowed) {
             throw new BusinessException("Invalid status transition from " + current + " to " + next);
         }
     }
+    
 }
