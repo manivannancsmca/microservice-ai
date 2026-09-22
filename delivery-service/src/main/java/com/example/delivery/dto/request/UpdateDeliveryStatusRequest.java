@@ -8,4 +8,5 @@ public record UpdateDeliveryStatusRequest(
         @NotNull DeliveryStatus status,
         String trackingNumber,
         String failureReason
+        
 ) {}
