@@ -105,4 +105,5 @@ public class OrderServiceImpl implements OrderService {
         String random = UUID.randomUUID().toString().substring(0, 4).toUpperCase();
         return "ORD-" + timestamp + "-" + random;
     }
+    
 }
