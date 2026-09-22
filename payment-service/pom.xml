@@ -87,8 +87,6 @@
             <version>${springdoc.version}</version>
         </dependency>
 
-        <!-- Testcontainers (for real MySQL integration tests later) -->
-
         <!-- Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
