@@ -12,10 +12,8 @@ Content-Type: application/json
   "content": "Thank you! Your order #ord-456 has been received."
 }
 
-
 ### Get Notification
 GET http://localhost:8086/api/v1/notifications/ed162916-629f-4761-bd7e-541f27f5a04e
-
 
 ### Update Notification Status
 PUT http://localhost:8086/api/v1/notifications/{notificationId}/status
@@ -24,7 +22,6 @@ Content-Type: application/json
 {
   "status": "SENT"
 }
-
 
 ### Retry Notification (only if FAILED)
 POST http://localhost:8086/api/v1/notifications/{notificationId}/retry
