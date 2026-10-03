@@ -11,12 +11,14 @@ eureka:
   instance:
     hostname: ${EUREKA_HOSTNAME:localhost}
     prefer-ip-address: false
+    
   client:
     # Standalone mode – server does NOT register itself
     register-with-eureka: false
     fetch-registry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      
   server:
     # Production recommendation: keep self-preservation ON
     enable-self-preservation: true
