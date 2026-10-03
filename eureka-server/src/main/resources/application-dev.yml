@@ -3,3 +3,4 @@ eureka:
     # Faster cleanup while developing
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 5000
+    
