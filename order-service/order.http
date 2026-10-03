@@ -29,10 +29,8 @@ Content-Type: application/json
 ### Get order by ID
 GET http://localhost:8084/api/v1/orders/1
 
-
 ### Get order by order number
 GET http://localhost:8084/api/v1/orders/number/ORD-20260906123045-A1B2
-
 
 ### List orders for a user
 GET http://localhost:8084/api/v1/orders?userId=1&status=PENDING&page=0&size=10
@@ -69,7 +67,6 @@ Content-Type: application/json
   ]
 }
 
-
 ### POST 2 - Create order with multiple products
 POST http://localhost:8084/api/v1/orders
 Content-Type: application/json
@@ -100,7 +97,6 @@ Content-Type: application/json
     }
   ]
 }
-
 
 ### POST 3 - Create order for another user
 POST http://localhost:8084/api/v1/orders
